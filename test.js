@@ -28,9 +28,12 @@ function createGrid (userNumber) {
 //asks user to enter number to create grid
 function askUser () {
     let response = prompt("Please enter a number between 1 and 100");
-    if (response >1 && response<100) {
+    if (response >=1 && response<=100) {
         createGrid(response);
-    } else alert("Invalid number. Please try again.");
+    } else {
+        alert("Invalid number. Please try again."); 
+        return askUser();
+    }
 }
 
 button.addEventListener("click", askUser);
