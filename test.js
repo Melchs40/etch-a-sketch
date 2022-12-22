@@ -30,7 +30,9 @@ function askUser () {
     let response = prompt("Please enter a number between 1 and 100");
     if (response >=1 && response<=100) {
         createGrid(response);
-    } else {
+    } else if (response === null) {
+        return;
+    }else {
         alert("Invalid number. Please try again."); 
         return askUser();
     }
