@@ -37,5 +37,10 @@ function askUser () {
         return askUser();
     }
 }
-
+//adds event listener to button
 button.addEventListener("click", askUser);
+
+
+const squares = document.querySelectorAll("square");
+
+console.log(squares);
