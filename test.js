@@ -23,6 +23,13 @@ function createGrid (userNumber) {
     container.style.minWidth = `${userNumber*30}px`;
     container.appendChild(square);
     }
+    //new material
+    const squares = document.querySelectorAll(".square");
+    squares.forEach((square) => {
+        square.addEventListener("mouseover", () => {
+            square.style.backgroundColor = "slateblue";
+        });
+    });
 }
 
 //asks user to enter number to create grid
@@ -39,8 +46,3 @@ function askUser () {
 }
 //adds event listener to button
 button.addEventListener("click", askUser);
-
-
-const squares = document.querySelectorAll("square");
-
-console.log(squares);
