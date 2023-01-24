@@ -11,6 +11,7 @@ function removeGrid () {
 //creates grid on page and removes any prior grid
 function createGrid (userNumber) {
     let container = document.getElementById("container");
+    container.style.border = "10px solid";
     removeGrid();
     for (let i=0; i<(userNumber*userNumber); i++) {
     let square = document.createElement("div");
@@ -40,7 +41,7 @@ function askUser () {
     } else if (response === null) {
         return;
     }else {
-        alert("Invalid number. Please try again."); 
+        alert("Invalid number. Please enter a number between 1 and 100."); 
         return askUser();
     }
 }
